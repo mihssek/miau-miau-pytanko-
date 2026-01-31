@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.zawartosc {
+    text-align: center;
+}
+
+h1 {
+    color: #cc0000;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.przyciski {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#tak {
+    background-color: #28a745;
+    color: white;
+}
+
+#nie {
+    background-color: #dc3545;
+    color: white;
+}
+
+.gif {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.napis-koncowy {
+    font-size: 50px;
+    margin: 0;
+}

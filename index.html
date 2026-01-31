@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja Walentynka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="glowny-kontener">
+        <div class="zawartosc">
+            <img src="serduszko.gif"class="gif">
+            
+            <h1 id="napis">Zostaniesz moją Walentynką?</h1>
+            
+            <div class="przyciski">
+                <button id="nie" onmouseover="uciekaj()" onclick="uciekaj()">Nie</button>
+                <button id="tak" onclick="TAK()">Tak</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let rozmiar = 1;
+
+        function uciekaj() {
+            const przyciskNie = document.getElementById('nie');
+            const przyciskTak = document.getElementById('tak');
+
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            
+            przyciskNie.style.position = 'fixed';
+            przyciskNie.style.left = x + 'px';
+            przyciskNie.style.top = y + 'px';
+
+            rozmiar += 0.5;
+            przyciskTak.style.transform = `scale(${rozmiar})`;
+            przyciskTak.style.zIndex = "100";
+        }
+
+        function TAK() {
+            document.getElementById('glowny-kontener').innerHTML = `
+                <div class="zawartosc">
+                    <img src="buziaczki.gif" class="gif">
+                    <h1 class="napis-koncowy">Kocham Cię! ❤️</h1>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
